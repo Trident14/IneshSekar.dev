@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <a href="#" className="text-xl font-bold tracking-tighter">
-              Portfolio<span className="text-blue-600">.dev</span>
+             <span className="text-blue-600"> Inesh Sekar </span>
             </a>
           </div>
 

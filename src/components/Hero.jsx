@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
+import { useXP } from '../XPContext';  // Import the XP context hook
 
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [xpWidth, setXpWidth] = useState(0);
+  const { earnXP } = useXP();  // Access the earnXP function
 
   const codeExamples = [
     { code: 'print("Hello World")', language: 'Python' },
@@ -34,6 +36,12 @@ const HeroSection = () => {
     if (projectSection) {
       projectSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  // Function to handle "View Projects" button click and award XP
+  const handleViewProjectsClick = () => {
+    earnXP(100);  // Award 100 XP when the button is clicked
+    scrollToProjects();  // Scroll to the projects section
   };
 
   return (
@@ -104,7 +112,7 @@ const HeroSection = () => {
 
           <div className="mt-8">
             <button
-              onClick={scrollToProjects}
+              onClick={handleViewProjectsClick}  // Call the handle function on click
               className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 animate__animated animate__pulse animate__infinite"
             >
               View Projects
