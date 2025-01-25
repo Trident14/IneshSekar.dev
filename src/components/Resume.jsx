@@ -46,6 +46,9 @@ export default function ResumeSection() {
                   onClick={handleView}
                   className="group relative inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
                 >
+                   <div className="absolute -top-3 -right-3 flex gap-2">
+                      <span className="badge bg-purple-400 text-purple-900">+50XP</span>
+                    </div>
                   <span className="relative">
                     View Resume
                     <span className="ml-2 inline-block group-hover:animate-bounce">📄</span>
@@ -58,6 +61,9 @@ export default function ResumeSection() {
                   onClick={handleDownload}
                   className="group relative inline-flex items-center justify-center px-8 py-3 bg-green-600 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
                 >
+                  <div className="absolute -top-3 -right-3 flex gap-2">
+                      <span className="badge bg-purple-400 text-purple-900">+100XP</span>
+                    </div>
                   <span className="relative">
                     Download Resume
                     <span className="ml-2 inline-block group-hover:animate-bounce">📥</span>

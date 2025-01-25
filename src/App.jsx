@@ -8,19 +8,24 @@ import Resume from "./components/Resume";
 import Achievements from "./components/Achievements";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import toast, { Toaster } from 'react-hot-toast';
+
 
 function App() {
   return (
-    <XPProvider>  {/* Wrap the whole app with XPProvider */}
-      <Navbar />
-      <Hero />
-      <Projects />
-      <Skills />
-      <Resume />
-      <Achievements />
-      <Contact />
-      <Footer />
-    </XPProvider>
+  <>
+    <div><Toaster/> </div>
+      <XPProvider>  {/* Wrap the whole app with XPProvider */}
+        <Navbar />
+        <Hero />
+        <Projects />
+        <Skills />
+        <Resume />
+        <Achievements />
+        <Contact />
+        <Footer />
+      </XPProvider>
+    </>
   );
 }
 

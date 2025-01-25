@@ -27,7 +27,6 @@ const Navbar = () => {
               <a href="#hero" className="nav-link">Home</a>
               <a href="#projects" className="nav-link">Projects</a>
               <a href="#skills" className="nav-link">Skills</a>
-              <a href="#github" className="nav-link">GitHub</a>
               <a href="#resume" className="nav-link">Resume</a>
               <a href="#achievements" className="nav-link">Achievements</a>
               <a href="#contact" className="nav-link">Contact</a>

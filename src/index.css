@@ -2,73 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Reset for overflow styles */
 * {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
+  box-sizing: border-box;    /* Ensure consistent box-sizing */
 }
 
-/* Webkit browsers like Chrome, Safari, newer Edge */
+/* Remove default margin and padding from the body */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;  /* Ensure the body takes the full height of the viewport */
+  
+}
+
+/* Remove scrollbars across webkit browsers */
 *::-webkit-scrollbar {
   display: none;
   width: 0;
   height: 0;
 }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-          width: 0px;
-        }
-        
-        ::-webkit-scrollbar-track {
-          background: #f1f1f1;
-          border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-          background: #888;
-          border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-          background: #666;
-        }
 
-        /* Remove tap highlight on mobile */
-        * {
-          -webkit-tap-highlight-color: transparent;
-        }
+/* Add smooth scrolling and overflow behavior */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;  /* Prevent horizontal scrolling */
+  overflow-y: auto;    /* Enable vertical scrolling */
+  min-height: 100vh;    /* Make sure the body height fills the entire viewport */
+}
 
-        /* Improve text rendering */
-        body {
-          text-rendering: optimizeLegibility;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-        }
+/* Custom scrollbar styles (optional, could be commented out if not needed) */
+::-webkit-scrollbar {
+  width: 0px;
+}
 
-        /* Focus outline styles */
-        :focus-visible {
-          outline: 2px solid currentColor;
-          outline-offset: 2px;
-        }
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
 
-        /* Print styles */
-        @media print {
-          .no-print {
-            display: none !important;
-          }
-          
-          a[href]:after {
-            content: " (" attr(href) ")";
-          }
-        }
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
 
-        html, body {
-          height: 100%;
-          margin: 0;
-          padding: 0;
-        }
-        
-        body {
-          overflow-x: hidden; /* Prevent horizontal scroll */
-        }
-        
-       
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Remove tap highlight color on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Focus outline for accessibility */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}

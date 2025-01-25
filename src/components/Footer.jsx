@@ -1,15 +1,21 @@
 import React from 'react';
+import { useXP } from "../XPContext"; // Import the useXP hook to access context
+import toast from 'react-hot-toast';
 
 const Footer = () => {
+  const { xp, level, maxXP } = useXP();  // Get the current XP, level, and maxXP from context
+  
   return (
-    <footer id="footer" className="bg-neutral-900 text-white py-12">
+    <footer id="footer" className="bg-neutral-900 text-white py-12 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
             <h3 className="text-xl font-bold mb-4">Inesh Sekar</h3>
             <div className="flex items-center space-x-2">
-              <span className="inline-block px-3 py-1 text-sm bg-neutral-800 rounded-full">Total XP: 1500</span>
-              <span className="inline-block px-3 py-1 text-sm bg-neutral-800 rounded-full">Level 5</span>
+              <span className="inline-block px-3 py-1 text-sm bg-neutral-800 rounded-full">Total XP: {xp}</span>
+            </div>
+            <div className="text-neutral-400 text-sm mt-2">
+              Max XP to reach All: {maxXP}
             </div>
           </div>
 
@@ -23,13 +29,22 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="flex flex-col flex-grow">
             <h4 className="text-lg font-semibold mb-4">Journey</h4>
             <ul className="space-y-2">
               <li className="text-neutral-400">🏆 Techie</li>
               <li className="text-neutral-400">⭐️ Software Developer</li>
               <li className="text-neutral-400">🎮 Game Dev Journey</li>
               <li className="text-neutral-400">🚀 Backend Developer</li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col flex-grow">
+            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+            <ul className="space-y-2">
+              <li className="text-neutral-400">📍 Noida, India</li>
+              <li className="text-neutral-400">📧 sekarinesh@gmail.com</li>
+              <li className="text-neutral-400">🌍 Available for remote work</li>
             </ul>
           </div>
         </div>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import lanternquestImage from '../assets/lanternquest.png'; // Import the image
+import lanternquestImage from '../assets/lanternquest.png'; 
+import LQ1 from '../assets/LQ1.png';
+import LQ2 from '../assets/LQ2.png';  
 import { FaExternalLinkAlt, FaYoutube } from 'react-icons/fa';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -84,7 +86,7 @@ const ProjectCard = ({ title, cardDescription, popupDescription, techStack, prev
             <Carousel showThumbs={false} infiniteLoop autoPlay>
               {previewImages.map((img, index) => (
                 <div key={index}>
-                  <img src={img} alt={`Project ${index}`} className="rounded-md" />
+                  <img src={img} alt={`Project ${index}`} className=" h-40 rounded-md" />
                 </div>
               ))}
             </Carousel>
@@ -130,8 +132,8 @@ const ProjectsSection = () => {
       techStack: ['Godot', 'C#', 'PixelArt', 'OOPS', 'Game Mechanics'],
       previewImages: [
         lanternquestImage,
-        'https://via.placeholder.com/400', 
-        'https://via.placeholder.com/400',
+        LQ1, 
+        LQ2,
       ],
       deploymentLink: 'https://velociraptor10.itch.io/lantern-quest',
       youtubeLink: 'https://www.youtube.com/watch?v=WJ5RDBA62-o',
