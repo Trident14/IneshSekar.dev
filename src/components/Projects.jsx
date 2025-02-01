@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import lanternquestImage from '../assets/lanternquest.png'; 
 import LQ1 from '../assets/LQ1.png';
 import LQ2 from '../assets/LQ2.png';  
+import isPay1 from '../assets/isPay1.png'
+import isPay2 from '../assets/isPay2.png'
+import isPay from '../assets/isPayPrimary.png'
 import { FaExternalLinkAlt, FaYoutube } from 'react-icons/fa';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -151,9 +154,10 @@ const ProjectsSection = () => {
       `,
       techStack: ['MongoDB', 'Express', 'Node', 'React', 'Cloud Hosting'],
       previewImages: [
-        lanternquestImage,
-        'https://via.placeholder.com/400', 
-        'https://via.placeholder.com/400',
+        isPay,
+        isPay1,
+        isPay2,
+       
       ],
       deploymentLink: 'https://ispayapp.onrender.com/',
       badgeName: 'Top Choice',
