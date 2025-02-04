@@ -59,18 +59,18 @@ const HeroSection = () => {
                   style={{ width: `${xpWidth}%` }}
                 ></div>
               </div>
-              <div className="text-xs text-neutral-500 mt-1">Level 1 Developer</div>
+              <div className="text-xs text-neutral-500">Level 1 Developer</div>
             </div>
           </div>
 
           <motion.div
-            className="flex items-center justify-center space-x-2"
+            className="flex items-center justify-center flex-col space-x-0 space-y-2 pt-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
             <motion.h1
-              className="text-4xl md:text-6xl font-bold tracking-tight text-neutral-900 animate__animated animate__fadeIn"
+              className="text-6xl font-bold tracking-tight text-neutral-900 animate__animated animate__fadeIn"
               initial={{ scale: 1 }}
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
@@ -99,16 +99,16 @@ const HeroSection = () => {
           <div className="mt-8 h-20">
             <div
               id="code-examples"
-              className="text-xl md:text-2xl font-mono text-neutral-700"
+              className="text-lg sm:text-xl md:text-2xl font-mono text-neutral-700"
             >
-              <div className="code-line animate__animated animate__fadeIn">
-                {codeExamples[currentIndex].code}
-                <span className="text-sm text-blue-500 ml-2">
-                  //{codeExamples[currentIndex].language}
-                </span>
-              </div>
-            </div>
-          </div>
+            <div className="code-line animate__animated animate__fadeIn">
+              {codeExamples[currentIndex].code}
+              <span className="text-xs sm:text-sm text-blue-500 ml-2">
+                //{codeExamples[currentIndex].language}
+        </span>
+    </div>
+  </div>
+</div>
 
           <div className="mt-8">
             <button

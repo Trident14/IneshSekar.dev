@@ -175,9 +175,9 @@ const ProjectsSection = () => {
           </h2>
         </div>
 
-        <div className="flex justify-center gap-8 flex-wrap">
+        <div className="flex justify-center gap-16 flex-wrap">
           {projects.map((project, index) => (
-            <div className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3" key={index}>
+            <div className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 " key={index}>
               <ProjectCard {...project} />
             </div>
           ))}
