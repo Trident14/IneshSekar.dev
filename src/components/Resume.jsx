@@ -5,12 +5,12 @@ export default function ResumeSection() {
 
   const handleDownload = () => {
     earnXP(100);  // Earn 50 XP when the download button is clicked
-    window.open("https://drive.google.com/uc?export=download&id=12SRVrhX85TxNWqrSXovMA2KBquIygb0c", "_blank");
+    window.open("https://drive.google.com/uc?export=download&id=1PmsFJYrRCsPYfGeEUIo7eCOsxzrsMnCJ", "_blank");
   };
 
   const handleView = () => {
     earnXP(50);  // Earn 25 XP when the view button is clicked
-    window.open("https://drive.google.com/file/d/12SRVrhX85TxNWqrSXovMA2KBquIygb0c/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/1PmsFJYrRCsPYfGeEUIo7eCOsxzrsMnCJ/view?usp=sharing", "_blank");
   };
 
   return (

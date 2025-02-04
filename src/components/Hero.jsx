@@ -70,7 +70,7 @@ const HeroSection = () => {
             transition={{ duration: 1 }}
           >
             <motion.h1
-              className="text-6xl font-bold tracking-tight text-neutral-900 animate__animated animate__fadeIn"
+              className="text-5xl font-bold tracking-tight text-neutral-900 animate__animated animate__fadeIn"
               initial={{ scale: 1 }}
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
