@@ -159,7 +159,7 @@ const ProjectsSection = () => {
         isPay2,
        
       ],
-      deploymentLink: 'https://ispayapp.onrender.com/',
+      deploymentLink: 'https://ispay.pages.dev/',
       badgeName: 'Top Choice',
       xp: 150,
     },
