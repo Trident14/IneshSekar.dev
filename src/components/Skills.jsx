@@ -6,6 +6,8 @@ import api from "../assets/icons8-api-128.png";
 import backend from "../assets/icons8-backend-50.png";
 import jwt from "../assets/jwt.png";
 import fullstack from "../assets/fullstack.png";
+import performance from "../assets/performance.png"
+import backendImg from "../assets/backendImg.png"
 
 const SkillSection = () => {
   return (
@@ -63,7 +65,7 @@ const SkillSection = () => {
                   <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 sm:px-10">
                     <img
                       className="w-full max-lg:max-w-xs"
-                      src="https://tailwindui.com/plus/img/component-images/bento-03-performance.png"
+                      src={performance}
                       alt="Performance"
                     />
                   </div>
@@ -85,7 +87,7 @@ const SkillSection = () => {
                   <div className="flex flex-1 items-center max-lg:py-6 lg:pb-2">
                     <img
                       className="h-[152px] object-cover"
-                      src="https://tailwindui.com/plus/img/component-images/bento-03-security.png"
+                      src={backendImg}
                       alt="Backend"
                     />
                   </div>
